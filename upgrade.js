@@ -78,7 +78,12 @@
                 itemSelector: '.trumpism'
             });
     }
+	
     $.getScript('https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js',() => {
-	$.getScript('https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.js'  , () => {
-    $.getScript('https://cdn.jsdelivr.net/jquery.nested/1.01/jquery.nested.js'          , () => { normalizeDOM(); prettifyPage(); }); }); });
+    $.getScript('https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.js'  , () => {
+    $.getScript('https://cdn.jsdelivr.net/jquery.nested/1.01/jquery.nested.js'          , () => {
+    $(document).ready(() => { 
+      normalizeDOM(); 
+      prettifyPage(); 
+    }); }); }); });
 })($,document);
